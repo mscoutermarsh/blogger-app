@@ -5,3 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+#
+ruby = Category.create!(name: 'Ruby')
+heroku = Category.create!(name: 'Heroku')
+
+mike = Author.create!(name: 'Mike')
+
+Post.create!(title: "Deploying a Ruby app to Heroku!",
+             content: 'Blog post content goes here',
+             author: mike, categories: [ruby, heroku])
+
+Post.create!(title: "Ruby is awesome!",
+             content: 'Blog post content goes here',
+             author: mike, categories: [ruby] )
