@@ -14,13 +14,17 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'rails_12factor', group: :production
 gem 'high_voltage'
+gem "ar-octopus", git: "git://github.com/tchandy/octopus.git",
+                  ref: "76b39116338cc6c0bc1311d8aa6fa4fb50964d84"
+
 group :development do
   gem 'better_errors'
-  gem 'binding_of_caller', :platforms=>[:mri_21]
   gem 'quiet_assets'
   gem 'rails_layout'
 end
 group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-byebug'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
 end

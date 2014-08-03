@@ -1,0 +1,19 @@
+octopus:
+  replicated: true
+  fully_replicated: false
+  development:
+    read_only:
+      adapter: postgresql
+      encoding: unicode
+      database: blogger-postgres_development
+      pool: 5
+      username: postgres
+      password:
+  test:
+    read_only:
+      adapter: postgresql
+      encoding: unicode
+      database: blogger-postgres_test
+      pool: 5
+      username: postgres
+      password:
