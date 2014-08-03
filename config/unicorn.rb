@@ -13,7 +13,9 @@ before_fork do |server, worker|
   end
 
   if defined?(ActiveRecord::Base)
-    ActiveRecord::Base.connection_proxy.instance_variable_get(:@shards).each do |shard, connection_pool|
+    shards = ActiveRecord::Base.connection_proxy.instance_variable_get(:@shards)
+
+    shards.each do |shard, connection_pool|
       connection_pool.disconnect!
     end
 
