@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Octopus.using(:read_only) {Post.all}
   end
 
   # GET /posts/1
