@@ -14,18 +14,22 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'rails_12factor', group: :production
 gem 'high_voltage'
+gem 'simple_form'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
   gem 'quiet_assets'
   gem 'rails_layout'
 end
+
 group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'pry-rails'
   gem 'pry-byebug'
 end
+
 group :test do
   gem 'capybara'
   gem 'shoulda-matchers'
