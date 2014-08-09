@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<% cache ['v1', @post] do %>
+<% cache @post do %>
   <p>
     <strong>Title:</strong>
     <%= @post.title %>
