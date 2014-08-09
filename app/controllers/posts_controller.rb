@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Rails.cache.fetch('all posts', expires_in: 1.hour){Post.all}
   end
 
   # GET /posts/1
