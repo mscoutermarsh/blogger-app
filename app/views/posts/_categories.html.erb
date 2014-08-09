@@ -1,0 +1,4 @@
+<strong>
+  <%= 'Category'.pluralize(categories.count) %>:
+</strong>
+<%= categories.pluck(:name).join(', ') %>
