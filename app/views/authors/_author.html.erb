@@ -1,4 +1,6 @@
-<p>
-  <strong>Author:</strong>
-  <%= author.name %>
-</p>
+<% cache ['v1', author] do %>
+  <p>
+    <strong>Author:</strong>
+    <%= author.name %>
+  </p>
+<% end %>

@@ -1,4 +1,6 @@
-<strong>
-  <%= 'Category'.pluralize(categories.count) %>:
-</strong>
-<%= categories.pluck(:name).join(', ') %>
+<% cache ['v1', categories] do %>
+  <strong>
+    <%= 'Category'.pluralize(categories.count) %>:
+  </strong>
+  <%= categories.pluck(:name).join(', ') %>
+<% end %>
