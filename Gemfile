@@ -15,6 +15,7 @@ gem 'bootstrap-sass'
 gem 'rails_12factor', group: :production
 gem 'high_voltage'
 gem 'simple_form'
+gem 'rack-timeout'
 
 group :development do
   gem 'better_errors'
