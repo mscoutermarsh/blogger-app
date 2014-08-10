@@ -16,6 +16,8 @@ gem 'rails_12factor', group: :production
 gem 'high_voltage'
 gem 'simple_form'
 
+gem 'heroku-deflater', group: :production
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
